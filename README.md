@@ -12,13 +12,15 @@ The target audience for this document is anybody wishing to learn about Mermaid 
 
 ## Why should I use Mermaid?
 
-- Simple, inline code syntax.
+- Diagrams improve the clarity and comprehension of documentation.
 
-- K8s docs and native docsy theme support.
+- Simple, inline code syntax that you can add to the markdown file.
+
+- K8s docs support.
 
 - On-line live editor so you can create and edit figures. 
   
-- Live editor generates a link for each figure. You can share this link to collaborate with colleagues on figure creation and editing.
+- Live editor generates a link beginning with for each figure. You can share this link to collaborate with colleagues on figure creation and editing.
 
 - Figure updates are simple: just open PR and edit the mermaid code in the respective markdown file.
 
@@ -127,7 +129,7 @@ class zoneA,zoneB cluster;
 
 ## Three methods to add Mermaid figures
 
-You have three methods for adding Mermaid figures to K8s docs: Hugo Mermaid shortcode, hybrid Mermaid+SVG and native docsy support. 
+You have three methods for adding Mermaid figures to K8s docs: Hugo Mermaid shortcode, hybrid Mermaid+SVG and docsy theme support. 
 
 The figure below lays out the three methods:
 ![3 methods](images/3-mermaid-methods.svg)
@@ -147,6 +149,8 @@ K8s docs supports a Hugo shortcode for handling Mermaid figures.
 * In-line Mermaid code so contributors/reviewers can edit on the fly.
 
 Note: Add the live editor URL link as a comment in your code so contributors/reviewers can view/edit/test the mermaid code.
+
+---
 
 ### Using hybrid Mermaid+SVG
 
@@ -171,9 +175,11 @@ To add a comment to the SVG image file, use a text editor and add something like
 <!-- https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb ... -->
 ```
 
-### Using native docsy
+---
 
-Note: Check closed PRs to see if K8s docs has enabled native docsy Mermaid support.
+### Using docsy theme
+
+Note: Check closed PRs to see if K8s docs has enabled docsy theme Mermaid support.
 
 * Use live editor to create and edit figures.
 
@@ -187,7 +193,91 @@ Note: Check closed PRs to see if K8s docs has enabled native docsy Mermaid suppo
 
 Note: Add the live editor URL link as a comment in your code so contributors/reviewers can view/edit/test the mermaid code.
 
+---
+
 ### Which method should I use?
+
+If you wish to create, edit and add figures to K8s docs right now, you can use the Hugo shortcode or Hybrid Mermaid+SVG methods. Check closed PRs for docsy theme support.
+
+Regardless of which method you choose, you should:
+
+- Use the live editor to create and edit figures.
+
+- Add the figure's live editor link to a comment in markdown file or in the SVG image file. 
+
+---
+
+## Share Mermaid figures
+
+You can share figures using functions included with the live editor.
+
+* Generate and send SVG image files.
+
+* Generate and send URL links pointing to the SVG image.
+
+* Generate and send URL links to pointing to the figure's mermaid code.
+
+---
+
+### How to share SVG images
+
+You might use this method to show a colleague a quick preview of an image you are working on. Or you could be using the Hybrid+SVG method to add figures to your content. 
+
+The following figure outlines the general workflow for sharing SVG images with the live editor.
+
+![share svg](images/share-svg.svg)
+
+
+[Live editor link to figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggTFJcbkFbWW91IC8gPGJyPiBmaWd1cmUgZWRpdG9yXSAtLT4gQltjcmVhdGUgLyA8YnI-IGVkaXQgZmlndXJlXVxuQiAtLT4gQ1tzYXZlIGZpZ3VyZV1cbkMgLS0-IEZbY29weSBpbWFnZTxicj50byBjbGlwYm9hcmRdXG5DIC0tPiBHW2dlbmVyYXRlIFNWRyBsaW5rXVxuQyAtLT4gRVtkb3dubG9hZCBTVkddXG5cbiAgICBjbGFzc0RlZiBib3ggZmlsbDojZmZmLHN0cm9rZTojMDAwLHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzAwMDtcbiAgICBjbGFzcyBBLEIsQyxELEUsRixHIGJveDtcbiIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)
+
+Use the following procedures to share SVG or PNG images.
+
+1. Create a figure in the live editor.
+
+2. Under history, save the figure. This generates a unique live editor link for the figure and code. You should save this link in case you need to modify it later.
+
+NOTE: The current state of the figure generated from the </> Code is saved.
+
+3. Under action, you have several options.
+
+* Copy image to clipboard then paste it to your favorite message or email app.
+
+* Generate a link to the SVG image. Note this is NOT the link to the live editor mermaid figure and code contained in your browser’s URL field. The SVG image pointers begin with `https://mermaid.ink/img/`.
+
+K8s docs does not support markdown links to external figures. 
+
+* Download SVG image file. If you use the image in your documentation, don’t forget to add the live editor link in a comment block in the SVG image file. 
+
+You can use the same procedures to share a PNG file with the exception that you cannot edit the file to add a live editor link.
+
+---
+
+### How to share live editor links
+
+The live editor generates a unique link for each new and edited figure. This enables colleagues to share links for each edited version of a figure.
+
+The link begins with the `https://mermaid-js.github.io/mermaid-live-editor/edit` prefix.
+
+You should use the live editor link if you, and one or more colleagues, are collaborating on a figure.
+
+The following figure outlines the general workflow for sharing live editor links.
+
+![share links](images/share-live-editor.svg)
+
+[Live editor link to figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggTFJcbkFbWW91IC8gPGJyPiBmaWd1cmUgZWRpdG9yXSAtLT4gQltjcmVhdGUgLyA8YnI-IGVkaXQgZmlndXJlXVxuQiAtLT4gQ1tzYXZlIGZpZ3VyZSAvIDxicj4gZ2VuZXJhdGUgbGlua11cbkMtLT58c2VuZCBsaW5rfERbcmVjZWl2ZWQgYnk8YnI-YW5vdGhlciA8YnI-IGZpZ3VyZSBlZGl0b3JdXG5EIC0tPiBFW2VkaXQvIDxicj4gc2F2ZSBmaWd1cmUvPGJyPiBnZW5lcmF0ZSBsaW5rXVxuRSAtLT58c2VuZCBuZXcgbGlua3wgQVxuXG5cblxuICAgIGNsYXNzRGVmIGJveCBmaWxsOiNmZmYsc3Ryb2tlOiMwMDAsc3Ryb2tlLXdpZHRoOjFweCxjb2xvcjojMDAwLCBmb250LXNpemU6MTZweDtcbiAgICBjbGFzcyBBLEIsQyxELEUsRixHIGJveDtcbiIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)
+
+Use the following procedures to generate and share live editor links.
+
+1. Create a figure in the live editor.
+
+2. Under history, save the figure. This generates a unique live editor link for this figure. You MUST save the figure to generate the live editor link you will share with colleagues. 
+
+3. Send the live editor link to your colleagues. This link is shown in the URL field of your browser and begins with `https://mermaid-js.github.io/mermaid-live-editor/edit`.
+
+4. When you receive a live editor link, click on it and the live editor will open and show the code and figure. After you make any edits, be sure to follow step 2 above to save the figure and then send the new live editor link.
+
+
+
 
 
 
