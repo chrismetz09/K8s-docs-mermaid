@@ -2,9 +2,28 @@
 
 Mermaid is a package for generating figures using simple text in markdown files. This document explains how you can use Mermaid to draw and include figures in your K8s docs contributions. It includes multiple examples, live-editor references and three methods for generating and embedding Mermaid figures inside your documentation.
 
-The target audience for this document is anybody wishing to learn about Mermaid and/or how to create and use figures for Kubernetes documentation. You need a basic understanding of markdown and how to use Hugo shortcodes. 
+The target audience for this document is anybody wishing to learn about Mermaid and/or how to create and add figures to Kubernetes documentation. You need a basic understanding of markdown and how to use Hugo shortcodes. 
 
-## Basics
+## References
+
+- [Mermaid docs](https://mermaid-js.github.io/mermaid/#/)
+
+- [Mermaid live editor](https://mermaid-js.github.io/mermaid-live-editor)
+
+## Why should I use Mermaid?
+
+- Simple, inline code syntax.
+
+- K8s docs and native docsy theme support.
+
+- On-line live editor so you can create and edit figures. Live editor generates a link for each figure. You can share this link to collaborate with colleagues on figure creation and editing.
+
+- Figure updates are simple: just open PR and edit the mermaid code in the respective markdown file.
+
+Basically, Mermaid provides a simple, open and transparent method for the community to add, edit and collaborate on figures for new or existing documents.
+
+--- 
+
 
 ## K8s docs Mermaid examples
 
