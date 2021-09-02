@@ -1,11 +1,24 @@
 # How to use Mermaid to add figures to your K8s docs contributions 
 
-Mermaid is a package for generating figures using simple text in markdown files. This document explains how you can use Mermaid to draw and include figures in your K8s docs contributions. It includes multiple examples, live-editor references and three methods for generating and embedding Mermaid figures inside your documentation.
+Mermaid is a package for generating figures using simple text in markdown files. This document explains how you can use Mermaid to create and add figures to your K8s docs contributions. It includes multiple examples, live-editor references and three methods for generating and embedding Mermaid figures inside your documentation.
 
-The target audience for this document is anybody wishing to learn about Mermaid and/or how to create and add figures to Kubernetes documentation. You need a basic understanding of markdown and how to use Hugo shortcodes. 
-
+The target audience for this document is anybody wishing to learn about Mermaid and/or how to create and add figures to Kubernetes documentation. 
 
 ---
+
+<br>
+
+
+## What you need to prepare and add figures
+
+- Basic understanding of markdown.
+- Using the Mermaid live editor.
+- [How to use Hugo shortcodes](https://kubernetes.io/docs/contribute/style/hugo-shortcodes/). 
+- Procedures to perform [local preview build](https://kubernetes.io/docs/contribute/new-content/open-a-pr/#preview-locally).
+
+---
+
+<br>
 
 ## References
 
@@ -15,34 +28,40 @@ The target audience for this document is anybody wishing to learn about Mermaid 
 
 ---
 
+<br>
+
 ## Why should I use Mermaid?
 
-- Diagrams improve the clarity and comprehension of documentation.
+- Diagrams improve documentation clarity and comprehension.
 
-- Simple, inline code syntax that you can add to the markdown file.
+- Simple, inline code syntax you add to the markdown file.
 
-- K8s docs support.
+- Included in K8s docs and docsy theme.
 
-- On-line live editor so you can create and edit figures. 
+- On-line live editor to create and edit figures. 
   
-- Live editor generates a link beginning with for each figure. You can share this link to collaborate with colleagues on figure creation and editing.
+- Live editor generates a link beginning for each figure. You can share this link with colleagues to collaborate on figure creation and editing.
 
-- Figure updates are simple: just open PR and edit the mermaid code in the respective markdown file.
+Live editor links begin with `https://mermaid-js.github.io/mermaid-live-editor/edit`.
+
+- Figure updates are simple: just open a PR and edit the mermaid code in the respective markdown file.
 
 Basically, Mermaid provides a simple, open and transparent method for the community to add, edit and collaborate on figures for new or existing documents.
 
+
 --- 
 
+<br>
 
 ## K8s docs Mermaid examples
 
-This section contains examples of Mermaid figures currently included in K8s docs. 
+This section contains examples of Mermaid figures currently used in K8s docs. Each example includes the docs page where the figure is rendered, a link to the repo source markdown file, live editor link, the actual figure and the mermaid code encapsulated in the hugo `{{< mermaid >}}` shortcode. 
 
 Docs page: [What is Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#what-is-ingress)
 
-K8s/website file link: [ingress.md](https://github.com/kubernetes/website/blob/main/content/en/docs/concepts/services-networking/ingress.md)
+K8s/website repo file link: [ingress.md](https://github.com/kubernetes/website/blob/main/content/en/docs/concepts/services-networking/ingress.md)
 
-Live-editor link: [figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggIExSXG4gIGNsaWVudChbY2xpZW50XSktLiBJbmdyZXNzLW1hbmFnZWQgPGJyPiBsb2FkIGJhbGFuY2VyIC4tPmluZ3Jlc3NbSW5ncmVzc107XG4gIGluZ3Jlc3MtLT58cm91dGluZyBydWxlfHNlcnZpY2VbU2VydmljZV07XG4gIHN1YmdyYXBoIGNsdXN0ZXJcbiAgaW5ncmVzcztcbiAgc2VydmljZS0tPnBvZDFbUG9kXTtcbiAgc2VydmljZS0tPnBvZDJbUG9kXTtcbiAgZW5kXG4gIGNsYXNzRGVmIHBsYWluIGZpbGw6I2RkZCxzdHJva2U6I2ZmZixzdHJva2Utd2lkdGg6NHB4LGNvbG9yOiMwMDA7XG4gIGNsYXNzRGVmIGs4cyBmaWxsOiMzMjZjZTUsc3Ryb2tlOiNmZmYsc3Ryb2tlLXdpZHRoOjRweCxjb2xvcjojZmZmO1xuICBjbGFzc0RlZiBjbHVzdGVyIGZpbGw6I2ZmZixzdHJva2U6I2JiYixzdHJva2Utd2lkdGg6MnB4LGNvbG9yOiMzMjZjZTU7XG4gIGNsYXNzIGluZ3Jlc3Msc2VydmljZSxwb2QxLHBvZDIgazhzO1xuICBjbGFzcyBjbGllbnQgcGxhaW47XG4gIGNsYXNzIGNsdXN0ZXIgY2x1c3RlcjtcbiIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9) 
+Live editor link: [figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggIExSXG4gIGNsaWVudChbY2xpZW50XSktLiBJbmdyZXNzLW1hbmFnZWQgPGJyPiBsb2FkIGJhbGFuY2VyIC4tPmluZ3Jlc3NbSW5ncmVzc107XG4gIGluZ3Jlc3MtLT58cm91dGluZyBydWxlfHNlcnZpY2VbU2VydmljZV07XG4gIHN1YmdyYXBoIGNsdXN0ZXJcbiAgaW5ncmVzcztcbiAgc2VydmljZS0tPnBvZDFbUG9kXTtcbiAgc2VydmljZS0tPnBvZDJbUG9kXTtcbiAgZW5kXG4gIGNsYXNzRGVmIHBsYWluIGZpbGw6I2RkZCxzdHJva2U6I2ZmZixzdHJva2Utd2lkdGg6NHB4LGNvbG9yOiMwMDA7XG4gIGNsYXNzRGVmIGs4cyBmaWxsOiMzMjZjZTUsc3Ryb2tlOiNmZmYsc3Ryb2tlLXdpZHRoOjRweCxjb2xvcjojZmZmO1xuICBjbGFzc0RlZiBjbHVzdGVyIGZpbGw6I2ZmZixzdHJva2U6I2JiYixzdHJva2Utd2lkdGg6MnB4LGNvbG9yOiMzMjZjZTU7XG4gIGNsYXNzIGluZ3Jlc3Msc2VydmljZSxwb2QxLHBvZDIgazhzO1xuICBjbGFzcyBjbGllbnQgcGxhaW47XG4gIGNsYXNzIGNsdXN0ZXIgY2x1c3RlcjtcbiIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9) 
 
 Figure:
 
@@ -70,11 +89,13 @@ graph LR;
 
 ---
 
+<br>
+
 Docs page: [Pod Topology Spread Constraints#node labels](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/#node-labels)
 
-K8s/website file link: [ ../docs/concepts/workloads/pods/pod-topology-spread-constraints.md](https://github.com/kubernetes/website/blob/main/content/en/docs/concepts/workloads/pods/pod-topology-spread-constraints.md)
+K8s/website repo file link: [ ../docs/concepts/workloads/pods/pod-topology-spread-constraints.md](https://github.com/kubernetes/website/blob/main/content/en/docs/concepts/workloads/pods/pod-topology-spread-constraints.md)
 
-Live-editor link: [figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggVEJcbiAgICBzdWJncmFwaCBcInpvbmVCXCJcbiAgICAgICAgbjMoTm9kZTMpXG4gICAgICAgIG40KE5vZGU0KVxuICAgIGVuZFxuICAgIHN1YmdyYXBoIFwiem9uZUFcIlxuICAgICAgICBuMShOb2RlMSlcbiAgICAgICAgbjIoTm9kZTIpXG4gICAgZW5kXG5cbiAgICBjbGFzc0RlZiBwbGFpbiBmaWxsOiNkZGQsc3Ryb2tlOiNmZmYsc3Ryb2tlLXdpZHRoOjRweCxjb2xvcjojMDAwO1xuICAgIGNsYXNzRGVmIGs4cyBmaWxsOiMzMjZjZTUsc3Ryb2tlOiNmZmYsc3Ryb2tlLXdpZHRoOjRweCxjb2xvcjojZmZmO1xuICAgIGNsYXNzRGVmIGNsdXN0ZXIgZmlsbDojZmZmLHN0cm9rZTojYmJiLHN0cm9rZS13aWR0aDoycHgsY29sb3I6IzMyNmNlNTtcbiAgICBjbGFzcyBuMSxuMixuMyxuNCBrOHM7XG4gICAgY2xhc3Mgem9uZUEsem9uZUIgY2x1c3RlcjtcbiIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6dHJ1ZX0)
+Live editor link: [figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggVEJcbiAgICBzdWJncmFwaCBcInpvbmVCXCJcbiAgICAgICAgbjMoTm9kZTMpXG4gICAgICAgIG40KE5vZGU0KVxuICAgIGVuZFxuICAgIHN1YmdyYXBoIFwiem9uZUFcIlxuICAgICAgICBuMShOb2RlMSlcbiAgICAgICAgbjIoTm9kZTIpXG4gICAgZW5kXG5cbiAgICBjbGFzc0RlZiBwbGFpbiBmaWxsOiNkZGQsc3Ryb2tlOiNmZmYsc3Ryb2tlLXdpZHRoOjRweCxjb2xvcjojMDAwO1xuICAgIGNsYXNzRGVmIGs4cyBmaWxsOiMzMjZjZTUsc3Ryb2tlOiNmZmYsc3Ryb2tlLXdpZHRoOjRweCxjb2xvcjojZmZmO1xuICAgIGNsYXNzRGVmIGNsdXN0ZXIgZmlsbDojZmZmLHN0cm9rZTojYmJiLHN0cm9rZS13aWR0aDoycHgsY29sb3I6IzMyNmNlNTtcbiAgICBjbGFzcyBuMSxuMixuMyxuNCBrOHM7XG4gICAgY2xhc3Mgem9uZUEsem9uZUIgY2x1c3RlcjtcbiIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6dHJ1ZX0)
 
 Figure:
 
@@ -102,11 +123,13 @@ graph TB
 ```
 ---
 
+<br>
+
 Docs page: [Example: OneTopologySpreadConstraint](https://kubernetes.io/docs/concepts/workloads/pods/pod-topology-spread-constraints/#example-one-topologyspreadconstraint) // first figure on this page
 
-K8s/website file link: [ ../docs/concepts/workloads/pods/pod-topology-spread-constraints.md](https://github.com/kubernetes/website/blob/main/content/en/docs/concepts/workloads/pods/pod-topology-spread-constraints.md)
+K8s/website repo file link: [ ../docs/concepts/workloads/pods/pod-topology-spread-constraints.md](https://github.com/kubernetes/website/blob/main/content/en/docs/concepts/workloads/pods/pod-topology-spread-constraints.md)
 
-Live-editor link: [figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggIEJUXG4gICAgc3ViZ3JhcGggXCJ6b25lQlwiXG4gICAgICAgIHAzKFBvZCkgLS0-IG4zKE5vZGUzKVxuICAgICAgICBuNChOb2RlNClcbiAgICBlbmRcbiAgICBzdWJncmFwaCBcInpvbmVBXCJcbiAgICAgICAgcDEoUG9kKSAtLT4gbjEoTm9kZTEpXG4gICAgICAgIHAyKFBvZCkgLS0-IG4yKE5vZGUyKVxuICAgIGVuZFxuXG4gICAgY2xhc3NEZWYgcGxhaW4gZmlsbDojZGRkLHN0cm9rZTojZmZmLHN0cm9rZS13aWR0aDo0cHgsY29sb3I6IzAwMDtcbiAgICBjbGFzc0RlZiBrOHMgZmlsbDojMzI2Y2U1LHN0cm9rZTojZmZmLHN0cm9rZS13aWR0aDo0cHgsY29sb3I6I2ZmZjtcbiAgICBjbGFzc0RlZiBjbHVzdGVyIGZpbGw6I2ZmZixzdHJva2U6I2JiYixzdHJva2Utd2lkdGg6MnB4LGNvbG9yOiMzMjZjZTU7XG4gICAgY2xhc3MgbjEsbjIsbjMsbjQscDEscDIscDMgazhzO1xuICAgIGNsYXNzIHpvbmVBLHpvbmVCIGNsdXN0ZXI7XG4iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOnRydWV9)
+Live editor link: [figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggIEJUXG4gICAgc3ViZ3JhcGggXCJ6b25lQlwiXG4gICAgICAgIHAzKFBvZCkgLS0-IG4zKE5vZGUzKVxuICAgICAgICBuNChOb2RlNClcbiAgICBlbmRcbiAgICBzdWJncmFwaCBcInpvbmVBXCJcbiAgICAgICAgcDEoUG9kKSAtLT4gbjEoTm9kZTEpXG4gICAgICAgIHAyKFBvZCkgLS0-IG4yKE5vZGUyKVxuICAgIGVuZFxuXG4gICAgY2xhc3NEZWYgcGxhaW4gZmlsbDojZGRkLHN0cm9rZTojZmZmLHN0cm9rZS13aWR0aDo0cHgsY29sb3I6IzAwMDtcbiAgICBjbGFzc0RlZiBrOHMgZmlsbDojMzI2Y2U1LHN0cm9rZTojZmZmLHN0cm9rZS13aWR0aDo0cHgsY29sb3I6I2ZmZjtcbiAgICBjbGFzc0RlZiBjbHVzdGVyIGZpbGw6I2ZmZixzdHJva2U6I2JiYixzdHJva2Utd2lkdGg6MnB4LGNvbG9yOiMzMjZjZTU7XG4gICAgY2xhc3MgbjEsbjIsbjMsbjQscDEscDIscDMgazhzO1xuICAgIGNsYXNzIHpvbmVBLHpvbmVCIGNsdXN0ZXI7XG4iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOnRydWV9)
 
 Figure:
 ![](images/pod-topo-constraint-02.svg)
@@ -134,6 +157,8 @@ class zoneA,zoneB cluster;
 
 ---
 
+<br>
+
 ## Three methods to add Mermaid figures
 
 You have three methods for adding Mermaid figures to K8s docs: Hugo Mermaid shortcode, hybrid Mermaid+SVG and docsy theme support. 
@@ -145,6 +170,9 @@ The figure below lays out the three methods:
 
 [Live editor link to the 3 methods figure](https://mermaid-js.github.io/mermaid-live-editor/edit#eyJjb2RlIjoiZmxvd2NoYXJ0IFRCXG4gICAgc3ViZ3JhcGggdGhpcmRbMy4gRG9jc3kgVGhlbWVdXG4gICAgZGlyZWN0aW9uIFRCXG4gICAgICAgWFsgXSAtLi0gXG4gICAgICAgRFtVc2UgbGl2ZSBlZGl0b3I8YnI-dG8gY3JlYXRlL2VkaXQgZmlndXJlXSAtLT4gUltjdXQvcGFzdGUgY29kZTxicj50byAubWQgcGFnZV1cbiAgICAgICBSIC0tPiBFW1dyYXAgbWVybWFpZCBjb2RlPGJyPmluIGBgYG1lcm1haWRgYGA8YnI-Y29kZSBibG9ja11cbiAgICAgICBFIC0tPiBGW1Rlc3QhIV1cbiAgICBlbmRcblxuICAgIHN1YmdyYXBoIHNlY29uZFsyLiBIeWJyaWQgTWVybWFpZCtTVkddXG4gICAgICAgIGRpcmVjdGlvbiBUQlxuICAgICAgICBTWyBdIC0uLVxuICAgICAgICBHW1VzZSBsaXZlIGVkaXRvcjxicj50byBjcmVhdGUvZWRpdCBmaWd1cmVdIC0tPiBKW0dlbmVyYXRlL2Rvd25sb2FkIFNWR11cbiAgICAgICAgSiAtLT4gS1tBZGQgbGl2ZSBlZGl0b3IgbGluazxicj50byBTVkcgZmlsZTxicj51c2luZyB0ZXh0IGVkaXRvcl1cbiAgICAgICAgSyAtLT4gTFtBZGQgU1ZHIGZpbGUgdG88YnI-ZG9jcyB1c2luZyBzdGFuZGFyZDxicj50ZWNobmlxdWVzXVxuICAgICAgICBMIC0tPiBPW1Rlc3QhIV0gIFxuXG4gICAgZW5kXG5cbiAgICBzdWJncmFwaCBmaXJzdFsxLiBTaG9ydGNvZGVdXG4gICAgZGlyZWN0aW9uIFRCXG4gICAgICAgIFlbIF0gLS4tXG4gICAgICAgIEJbVXNlIGxpdmUgZWRpdG9yPGJyPnRvIGNyZWF0ZS9lZGl0IGZpZ3VyZV0gLS0-IFFbY3V0L3Bhc3RlIGNvZGU8YnI-dG8gLm1kIHBhZ2VdIFxuICAgICAgICBRIC0tPiBDW1dyYXAgbWVybWFpZCBjb2RlPGJyPiBpbiBzaG9ydGNvZGUgdGFnc10gLS0-IFBbVGVzdCEhXVxuICAgIGVuZFxuICAgIFxuICAgIEEoW2ZhOmZhLXVzZXIgQ29udHJpYnV0b3JdKSAtLT4gZmlyc3RcbiAgICBBIC0tPiBzZWNvbmRcbiAgICBBIC0tPiB0aGlyZFxuICAgIFxuICAgICBcblxuY2xhc3NEZWYgYmx1ZSBmaWxsOiNkZGQsc3Ryb2tlOiNmZmZmZmYsc3Ryb2tlLXdpZHRoOnB4LGNvbG9yOiMwMDAwMDAsIGZvbnQtc2l6ZToxNXB4O1xuY2xhc3NEZWYgd2hpdGUgZmlsbDojZmZmZmZmLHN0cm9rZTojMDAwLHN0cm9rZS13aWR0aDpweCxjb2xvcjojMDAwLGZvbnQtd2VpZ2h0OmJvbGRcbmNsYXNzRGVmIHNwYWNld2hpdGUgZmlsbDojZmZmZmZmLHN0cm9rZTojZmZmLHN0cm9rZS13aWR0aDowcHgsY29sb3I6IzAwMFxuY2xhc3MgQSxCLEMsRCxFLEYsRyxILE0sSixLLEwsTyxQLFEsUiBibHVlXG5jbGFzcyBTLFgsWSBzcGFjZXdoaXRlXG5jbGFzcyBmaXJzdCxzZWNvbmQsdGhpcmQgd2hpdGVcbiIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)
 
+---
+
+<br>
 
 
 ### Using Hugo shortcode
@@ -153,15 +181,18 @@ K8s docs supports a Hugo shortcode for handling Mermaid figures.
 
 * Use live editor to create and edit figures.
 
-* Implemented and used for existing Mermaid figures.
+* Implemented and used for existing K8s docs Mermaid figures. 
 
-* Easy to use by wrapping Mermaid code inside {{< mermaid >}} … {{</  mermaid >}} shortcode tags.
+* Easy to use by wrapping Mermaid code inside `{{< mermaid >}} … {{</  mermaid >}}` shortcode tags.
 
 * In-line Mermaid code so contributors/reviewers can edit on the fly.
 
-Note: Add the live editor URL link as a comment in your code so contributors/reviewers can view/edit/test the mermaid code.
+Note: Add the live editor URL link as a comment in your code so contributors/reviewers can view/edit/test your mermaid code and figures.
 
 ---
+
+<br>
+
 
 ### Using hybrid Mermaid+SVG
 
@@ -173,9 +204,9 @@ K8s docs supports SVG images. This method allows you to create/edit Mermaid figu
 
 * No change to existing K8s docs SVG image configuration. 
 
-* Leverage new Mermaid features available in live editor. Those features might not be available in the current K8s/website version.
+* Leverage new Mermaid features available in the live editor. Those features might not be available in the current K8s/website version. Check PRs or repo code to find out the Mermaid version supported in the K8s docs.
 
-* Mermaid code is de-coupled from the K8s docs. In other words, new or edited figures show up in PRs as SVG images, not in-line Mermaid code.
+* Mermaid code is de-coupled from the K8s docs. In other words, new or edited figures show up in PRs and code as SVG images, not in-line Mermaid code.
 
 Note: Add the live editor URL link as a comment block in the SVG file using your favorite text editor. Contributors/reviewers can then view/edit the mermaid code.
 
@@ -188,9 +219,12 @@ To add a comment to the SVG image file, use a text editor and add something like
 
 ---
 
+<br>
+
+
 ### Using docsy theme
 
-Note: Check closed PRs to see if K8s docs has enabled docsy theme Mermaid support.
+Note: Check PRs to see if K8s docs has enabled docsy theme Mermaid support.
 
 * Use live editor to create and edit figures.
 
@@ -206,15 +240,18 @@ Note: Add the live editor URL link as a comment in your code so contributors/rev
 
 ---
 
+<br>
+
+
 ### Which method should I use?
 
-If you wish to create, edit and add figures to K8s docs right now, you can use the Hugo shortcode or Hybrid Mermaid+SVG methods. Check closed PRs for docsy theme support.
+If you wish to create, edit and add figures to K8s docs right now, you can use the Hugo shortcode or Hybrid Mermaid+SVG methods. Check PRs for docsy theme support.
 
 Regardless of which method you choose, you should:
 
 - Use the live editor to create and edit figures.
 
-- Add the figure's live editor link to a comment in markdown file or in the SVG image file. 
+- Add the figure's live editor link to a comment in the markdown file or in the SVG image file. 
 
 ---
 
@@ -230,9 +267,12 @@ You can share figures using functions included with the live editor.
 
 ---
 
+<br>
+
+
 ### How to share SVG images
 
-You might use this method to show a colleague a quick preview of an image you are working on. Or you could be using the Hybrid+SVG method to add figures to your content. 
+You might use this method to show a colleague a quick preview of an image you are working on. Or you could use the Hybrid+SVG method to add figures to your content. 
 
 The following figure outlines the general workflow for sharing SVG images with the live editor.
 
@@ -241,33 +281,38 @@ The following figure outlines the general workflow for sharing SVG images with t
 
 [Live editor link to figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZ3JhcGggTFJcbkFbWW91IC8gPGJyPiBmaWd1cmUgZWRpdG9yXSAtLT4gQltjcmVhdGUgLyA8YnI-IGVkaXQgZmlndXJlXVxuQiAtLT4gQ1tzYXZlIGZpZ3VyZV1cbkMgLS0-IEZbY29weSBpbWFnZTxicj50byBjbGlwYm9hcmRdXG5DIC0tPiBHW2dlbmVyYXRlIFNWRyBsaW5rXVxuQyAtLT4gRVtkb3dubG9hZCBTVkddXG5cbiAgICBjbGFzc0RlZiBib3ggZmlsbDojZmZmLHN0cm9rZTojMDAwLHN0cm9rZS13aWR0aDoxcHgsY29sb3I6IzAwMDtcbiAgICBjbGFzcyBBLEIsQyxELEUsRixHIGJveDtcbiIsIm1lcm1haWQiOiJ7XG4gIFwidGhlbWVcIjogXCJkZWZhdWx0XCJcbn0iLCJ1cGRhdGVFZGl0b3IiOmZhbHNlLCJhdXRvU3luYyI6dHJ1ZSwidXBkYXRlRGlhZ3JhbSI6ZmFsc2V9)
 
+
+
 Use the following procedures to share SVG or PNG images.
 
 1. Create a figure in the live editor.
 
-2. Under history, save the figure. This generates a unique live editor link for the figure and code. You should save this link in case you need to modify it later.
+2. Under history, save the figure. This generates a unique live editor link for the figure and code. You should save this link in case you need to modify the image later.
 
 NOTE: The current state of the figure generated from the </> Code is saved.
 
 3. Under action, you have several options.
 
-* Copy image to clipboard then paste it to your favorite message or email app.
+* Copy the image to clipboard then paste it to your favorite message or email app.
 
 * Generate a link to the SVG image. Note this is NOT the link to the live editor mermaid figure and code contained in your browser’s URL field. The SVG image pointers begin with `https://mermaid.ink/img/`.
 
-K8s docs does not support markdown links to external figures. 
+K8s docs not support markdown links to external figures. 
 
-* Download SVG image file. If you use the image in your documentation, don’t forget to add the live editor link in a comment block in the SVG image file. 
+* Download the SVG image file. If you use the image in your documentation, don’t forget to add the live editor link in a comment block to the SVG image file. 
 
-You can use the same procedures to share a PNG file with the exception that you cannot edit the file to add a live editor link.
+You can use the same procedures to share a PNG file with the exception that you cannot edit the file to add a live editor link. You would need to place the live editor link in a comment before or after the PNG, just as you would with in-line Mermaid code.
 
 ---
 
+<br>
+
+
 ### How to share live editor links
 
-The live editor generates a unique link for each new and edited figure. This enables colleagues to share links for each edited version of a figure.
+The live editor generates a unique link for each new and edited figure. This enables colleagues to share links for each new or edited version of a figure.
 
-The link begins with the `https://mermaid-js.github.io/mermaid-live-editor/edit` prefix.
+The link begins with the `https://mermaid-js.github.io/mermaid-live-editor/edit` prefix and the entire link is shown in your browser's URL field.
 
 You should use the live editor link if you, and one or more colleagues, are collaborating on a figure.
 
@@ -285,7 +330,7 @@ Use the following procedures to generate and share live editor links.
 
 3. Send the live editor link to your colleagues. This link is shown in the URL field of your browser and begins with `https://mermaid-js.github.io/mermaid-live-editor/edit`.
 
-4. When you receive a live editor link, click on it and the live editor will open and show the code and figure. After you make any edits, be sure to follow step 2 above to save the figure and then send the new live editor link.
+4. When you receive a live editor link, click it and the live editor will open and show the code and figure. After you make any edits, repeat step 2 and step 3 above to save the figure and send out the new live editor link.
 
 
 
