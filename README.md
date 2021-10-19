@@ -9,12 +9,12 @@ The target audience for this document is anybody wishing to learn about Mermaid 
 <br>
 
 
-## What you need to prepare and add figures
+## What you need to know before working with Mermaid
 
-- Basic understanding of markdown.
-- Using the Mermaid live editor.
-- [How to use Hugo shortcodes](https://kubernetes.io/docs/contribute/style/hugo-shortcodes/). 
-- Procedures to perform [local preview build](https://kubernetes.io/docs/contribute/new-content/open-a-pr/#preview-locally).
+- Basic understanding of markdown
+- Using the Mermaid live editor
+- [How to use Hugo shortcodes](https://kubernetes.io/docs/contribute/style/hugo-shortcodes/) 
+- Procedures to perform [local preview build](https://kubernetes.io/docs/contribute/new-content/open-a-pr/#preview-locally)
 
 ---
 
@@ -56,6 +56,64 @@ Basically, Mermaid provides a simple, open and transparent method for the commun
 ## K8s docs Mermaid examples
 
 This section contains examples of Mermaid figures currently used in K8s docs. Each example includes the docs page where the figure is rendered, a link to the repo source markdown file, live editor link, the actual figure and the mermaid code encapsulated in the hugo `{{< mermaid >}}` shortcode. 
+
+Docs page: [Contribute to K8s docs](https://kubernetes.io/docs/contribute/)
+
+K8s/website repo file link: [../contribute/_index.md](https://github.com/kubernetes/website/blob/main/content/en/docs/contribute/_index.md)
+
+Live editor link: [figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiZmxvd2NoYXJ0IFRCXG4gICAgc3ViZ3JhcGggdGhpcmRbT3BlbiBQUl1cbiAgICAgICAgZGlyZWN0aW9uIFRCXG4gICAgICAgIFVbIF0gLS4tXG4gICAgICAgIFFbSW1wcm92ZSBjb250ZW50XSAtLS0gTltDcmVhdGUgY29udGVudF1cbiAgICAgICAgTiAtLS0gT1tUcmFuc2xhdGUgZG9jc11cbiAgICAgICAgTyAtLS0gUFtNYW5hZ2UvcHVibGlzaCBkb2NzIHBhcnRzPGJyPm9mIEs4cyByZWxlYXNlIGN5Y2xlXVxuIFxuICAgIGVuZFxuXG4gICAgc3ViZ3JhcGggc2Vjb25kW1Jldmlld11cbiAgICBkaXJlY3Rpb24gVEJcbiAgICAgICBUWyBdIC0uLVxuICAgICAgIERbTG9vayBvdmVyIHRoZTxicj5LOHMvd2Vic2l0ZTxicj5yZXBvc2l0b3J5XSAtLS0gRVtDaGVjayBvdXQgdGhlPGJyPkh1Z28gc3RhdGljIHNpdGU8YnI-Z2VuZXJhdG9yXVxuICAgICAgIEUgLS0tIEZbVW5kZXJzdGFuZCBiYXNpYzxicj5HaXRIdWIgY29tbWFuZHNdXG4gICAgICAgRiAtLS0gR1tSZXZpZXcgb3BlbiBQUjxicj5hbmQgY2hhbmdlIHJldmlldyA8YnI-cHJvY2Vzc2VzXVxuICAgIGVuZFxuXG4gICAgc3ViZ3JhcGggZmlyc3RbU2lnbiB1cF1cbiAgICAgICAgZGlyZWN0aW9uIFRCXG4gICAgICAgIFNbIF0gLS4tXG4gICAgICAgIEJbU2lnbiB0aGUgQ05DRjxicj5Db250cmlidXRvcjxicj5MaWNlbnNlIEFncmVlbWVudF0gLS0tIENbSm9pbiBzaWctZG9jczxicj5TbGFjayBjaGFubmVsXSBcbiAgICAgICAgQyAtLS0gVltKb2luIGt1YmVybmV0ZXMtc2lnLWRvY3M8YnI-bWFpbGluZyBsaXN0XVxuICAgICAgICBWIC0tLSBNW0F0dGVuZCB3ZWVrbHk8YnI-c2lnLWRvY3MgY2FsbHM8YnI-b3Igc2xhY2sgbWVldGluZ3NdXG4gICAgZW5kXG4gICAgXG4gICAgQShbZmE6ZmEtdXNlciBOZXc8YnI-Q29udHJpYnV0b3JdKSAtLT4gZmlyc3RcbiAgICBBIC0tPiBzZWNvbmRcbiAgICBBIC0tPiB0aGlyZFxuICAgIEEgLS0-IEhbQXNrIFF1ZXN0aW9ucyEhIV1cbiAgICAgXG5cbmNsYXNzRGVmIGdyZXkgZmlsbDojZGRkZGRkLHN0cm9rZTojZmZmZmZmLHN0cm9rZS13aWR0aDpweCxjb2xvcjojMDAwMDAwLCBmb250LXNpemU6MTVweDtcbmNsYXNzRGVmIHdoaXRlIGZpbGw6I2ZmZmZmZixzdHJva2U6IzAwMCxzdHJva2Utd2lkdGg6cHgsY29sb3I6IzAwMCxmb250LXdlaWdodDpib2xkXG5jbGFzc0RlZiBzcGFjZXdoaXRlIGZpbGw6I2ZmZmZmZixzdHJva2U6I2ZmZixzdHJva2Utd2lkdGg6MHB4LGNvbG9yOiMwMDBcbmNsYXNzIEEsQixDLEQsRSxGLEcsSCxNLFEsTixPLFAsViBncmV5XG5jbGFzcyBTLFQsVSBzcGFjZXdoaXRlXG5jbGFzcyBmaXJzdCxzZWNvbmQsdGhpcmQgd2hpdGVcblxuXG5cblxuXG4iLCJtZXJtYWlkIjoie1xuICBcInRoZW1lXCI6IFwiZGVmYXVsdFwiXG59IiwidXBkYXRlRWRpdG9yIjpmYWxzZSwiYXV0b1N5bmMiOnRydWUsInVwZGF0ZURpYWdyYW0iOnRydWV9)
+
+Figure:
+
+![contrib-diagram](images/contrib-getting-started.svg)
+
+Code:
+```mermaid
+{{< mermaid >}}
+flowchart TB
+    subgraph third[Open PR]
+        direction TB
+        U[ ] -.-
+        Q[Improve content] --- N[Create content]
+        N --- O[Translate docs]
+        O --- P[Manage/publish docs parts<br>of K8s release cycle]
+ 
+    end
+
+    subgraph second[Review]
+    direction TB
+       T[ ] -.-
+       D[Look over the<br>K8s/website<br>repository] --- E[Check out the<br>Hugo static site<br>generator]
+       E --- F[Understand basic<br>GitHub commands]
+       F --- G[Review open PR<br>and change review <br>processes]
+    end
+
+    subgraph first[Sign up]
+        direction TB
+        S[ ] -.-
+        B[Sign the CNCF<br>Contributor<br>License Agreement] --- C[Join sig-docs<br>Slack channel] 
+        C --- V[Join kubernetes-sig-docs<br>mailing list]
+        V --- M[Attend weekly<br>sig-docs calls<br>or slack meetings]
+    end
+    
+    A([fa:fa-user New<br>Contributor]) --> first
+    A --> second
+    A --> third
+    A --> H[Ask Questions!!!]
+     
+
+classDef grey fill:#dddddd,stroke:#ffffff,stroke-width:px,color:#000000, font-size:15px;
+classDef white fill:#ffffff,stroke:#000,stroke-width:px,color:#000,font-weight:bold
+classDef spacewhite fill:#ffffff,stroke:#fff,stroke-width:0px,color:#000
+class A,B,C,D,E,F,G,H,M,Q,N,O,P,V grey
+class S,T,U spacewhite
+class first,second,third white
+{{< /mermaid >}}
+```
+
+---
+
+<br>
 
 Docs page: [What is Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/#what-is-ingress)
 
@@ -152,6 +210,47 @@ classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
 classDef cluster fill:#fff,stroke:#bbb,stroke-width:2px,color:#326ce5;
 class n1,n2,n3,n4,p1,p2,p3 k8s;
 class zoneA,zoneB cluster;
+{{< /mermaid >}}
+```
+
+---
+
+<br>
+
+## Creating sequence diagrams
+
+Sequence diagrams describe a series of actions between components that result in a completed task. You can use Mermaid to create sequence diagrams.
+
+Here is a sequence diagram describing pod creation and container startup.
+
+![seq](images/mermaid-sequence-diagram.svg)
+
+Live editor link: [figure](https://mermaid-js.github.io/mermaid-live-editor/edit/#eyJjb2RlIjoiJSV7aW5pdDp7XCJ0aGVtZVwiOlwibmV1dHJhbFwifX0lJVxuc2VxdWVuY2VEaWFncmFtXG4gICAgYWN0b3IgbWVcbiAgICBwYXJ0aWNpcGFudCBhcGlTcnYgYXMgY29udHJvbCBwbGFuZTxicj48YnI-YXBpLXNlcnZlclxuICAgIHBhcnRpY2lwYW50IGV0Y2QgYXMgY29udHJvbCBwbGFuZTxicj48YnI-ZXRjZCBkYXRhc3RvcmVcbiAgICBwYXJ0aWNpcGFudCBjbnRybE1nciBhcyBjb250cm9sIHBsYW5lPGJyPjxicj5jb250cm9sbGVyPGJyPm1hbmFnZXJcbiAgICBwYXJ0aWNpcGFudCBzY2hlZCBhcyBjb250cm9sIHBsYW5lPGJyPjxicj5zY2hlZHVsZXJcbiAgICBwYXJ0aWNpcGFudCBrdWJlbGV0IGFzIG5vZGU8YnI-PGJyPmt1YmVsZXRcbiAgICBwYXJ0aWNpcGFudCBjb250YWluZXIgYXMgbm9kZTxicj48YnI-Y29udGFpbmVyPGJyPnJ1bnRpbWVcbiAgICBtZS0-PmFwaVNydjogMS4ga3ViZWN0bCBjcmVhdGUgLWYgcG9kLnlhbWxcbiAgICBhcGlTcnYtLT4-ZXRjZDogMi4gc2F2ZSBuZXcgc3RhdGVcbiAgICBjbnRybE1nci0-PmFwaVNydjogMy4gY2hlY2sgZm9yIGNoYW5nZXNcbiAgICBzY2hlZC0-PmFwaVNydjogNC4gd2F0Y2ggZm9yIHVuYXNzaWduZWQgcG9kcyhzKVxuICAgIGFwaVNydi0-PnNjaGVkOiA1LiBub3RpZnkgYWJvdXQgcG9kIHcgbm9kZW5hbWU9XCIgXCJcbiAgICBzY2hlZC0-PmFwaVNydjogNi4gYXNzaWduIHBvZCB0byBub2RlXG4gICAgYXBpU3J2LS0-PmV0Y2Q6IDcuIHNhdmUgbmV3IHN0YXRlXG4gICAga3ViZWxldC0-PmFwaVNydjogOC4gbG9vayBmb3IgbmV3bHkgYXNzaWduZWQgcG9kKHMpXG4gICAgYXBpU3J2LT4-a3ViZWxldDogOS4gYmluZCBwb2QgdG8gbm9kZVxuICAgIGt1YmVsZXQtPj5jb250YWluZXI6IDEwLiBzdGFydCBjb250YWluZXJcbiAgICBrdWJlbGV0LT4-YXBpU3J2OiAxMS4gdXBkYXRlIHBvZCBzdGF0dXNcbiAgICBhcGlTcnYtLT4-ZXRjZDogMTIuIHNhdmUgbmV3IHN0YXRlIiwibWVybWFpZCI6IntcbiAgXCJ0aGVtZVwiOiBcImRlZmF1bHRcIlxufSIsInVwZGF0ZUVkaXRvciI6ZmFsc2UsImF1dG9TeW5jIjp0cnVlLCJ1cGRhdGVEaWFncmFtIjp0cnVlfQ)
+
+Code:
+```
+{{< mermaid >}}
+%%{init:{"theme":"neutral"}}%%
+sequenceDiagram
+    actor me
+    participant apiSrv as control plane<br><br>api-server
+    participant etcd as control plane<br><br>etcd datastore
+    participant cntrlMgr as control plane<br><br>controller<br>manager
+    participant sched as control plane<br><br>scheduler
+    participant kubelet as node<br><br>kubelet
+    participant container as node<br><br>container<br>runtime
+    me->>apiSrv: 1. kubectl create -f pod.yaml
+    apiSrv-->>etcd: 2. save new state
+    cntrlMgr->>apiSrv: 3. check for changes
+    sched->>apiSrv: 4. watch for unassigned pods(s)
+    apiSrv->>sched: 5. notify about pod w nodename=" "
+    sched->>apiSrv: 6. assign pod to node
+    apiSrv-->>etcd: 7. save new state
+    kubelet->>apiSrv: 8. look for newly assigned pod(s)
+    apiSrv->>kubelet: 9. bind pod to node
+    kubelet->>container: 10. start container
+    kubelet->>apiSrv: 11. update pod status
+    apiSrv-->>etcd: 12. save new state
 {{< /mermaid >}}
 ```
 
