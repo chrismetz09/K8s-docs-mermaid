@@ -354,6 +354,9 @@ Regardless of which method you choose, you should:
 
 ---
 
+<br>
+
+
 ## Share Mermaid figures
 
 You can share figures using functions included with the live editor.
