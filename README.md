@@ -1,6 +1,6 @@
 # How to use Mermaid to add figures to your K8s docs contributions 
 
-Mermaid is a package for generating figures using simple text in markdown files. This document explains how you can use Mermaid to create and add figures to your K8s docs contributions. It includes multiple examples, live-editor references and three methods for generating and embedding Mermaid figures inside your documentation.
+Mermaid is a package for generating figures using simple markdown-like syntax in markdown files. This document explains how you can use Mermaid to create and add figures to your K8s docs contributions. It includes multiple examples, live-editor references and three methods for generating and embedding Mermaid figures inside your documentation.
 
 The target audience for this document is anybody wishing to learn about Mermaid and/or how to create and add figures to Kubernetes documentation. 
 
@@ -11,10 +11,10 @@ The target audience for this document is anybody wishing to learn about Mermaid 
 
 ## What you need to know before working with Mermaid
 
-- Basic understanding of markdown
-- Using the Mermaid live editor
-- [How to use Hugo shortcodes](https://kubernetes.io/docs/contribute/style/hugo-shortcodes/) 
-- Procedures to perform [local preview build](https://kubernetes.io/docs/contribute/new-content/open-a-pr/#preview-locally)
+- Basic understanding of markdown.
+- Using the Mermaid live editor.
+- [How to use Hugo shortcodes](https://kubernetes.io/docs/contribute/style/hugo-shortcodes/). 
+- Procedures to perform [local preview build](https://kubernetes.io/docs/contribute/new-content/open-a-pr/#preview-locally).
 
 ---
 
@@ -25,6 +25,8 @@ The target audience for this document is anybody wishing to learn about Mermaid 
 - [Mermaid docs](https://mermaid-js.github.io/mermaid/#/)
 
 - [Mermaid live editor](https://mermaid-js.github.io/mermaid-live-editor)
+
+- Sveidqvist, K., Jain, A. (2021). _The Official Guide to Mermaid.js_. MermaidPress
 
 ---
 
@@ -55,7 +57,9 @@ Basically, Mermaid provides a simple, open and transparent method for the commun
 
 ## K8s docs Mermaid examples
 
-This section contains examples of Mermaid figures currently used in K8s docs. Each example includes the docs page where the figure is rendered, a link to the repo source markdown file, live editor link, the actual figure and the mermaid code encapsulated in the hugo `{{< mermaid >}}` shortcode. 
+This section contains examples of Mermaid figures currently used in K8s docs. Each example includes the docs page where the figure is rendered, a link to the repo source markdown file, live editor link, the actual figure and the mermaid code. 
+
+K8s documentation encapsulates mermaid code in the hugo `{{< mermaid >}}/{{< /mermaid >}}` shortcode. I have omitted the shortcode in the code examples so that you can more easily cut/paste with the live-editor. 
 
 Docs page: [Contribute to K8s docs](https://kubernetes.io/docs/contribute/)
 
@@ -69,7 +73,6 @@ Figure:
 
 Code:
 ```mermaid
-{{< mermaid >}}
 flowchart TB
     subgraph third[Open PR]
         direction TB
@@ -108,7 +111,6 @@ classDef spacewhite fill:#ffffff,stroke:#fff,stroke-width:0px,color:#000
 class A,B,C,D,E,F,G,H,M,Q,N,O,P,V grey
 class S,T,U spacewhite
 class first,second,third white
-{{< /mermaid >}}
 ```
 
 ---
@@ -127,7 +129,6 @@ Figure:
 
 Code:
 ```mermaid
-{{< mermaid >}}
 graph LR;
  client([client])-. Ingress-managed <br> load balancer .->ingress[Ingress];
  ingress-->|routing rule|service[Service];
@@ -142,7 +143,6 @@ graph LR;
  class ingress,service,pod1,pod2 k8s;
  class client plain;
  class cluster cluster;
-{{</ mermaid >}}
 ```
 
 ---
@@ -161,7 +161,6 @@ Figure:
 
 Code:
 ```mermaid
-{{<mermaid>}}
 graph TB
    subgraph "zoneB"
        n3(Node3)
@@ -177,7 +176,6 @@ graph TB
    classDef cluster fill:#fff,stroke:#bbb,stroke-width:2px,color:#326ce5;
    class n1,n2,n3,n4 k8s;
    class zoneA,zoneB cluster;
-{{< /mermaid >}}
 ```
 ---
 
@@ -194,7 +192,6 @@ Figure:
 
 Code:
 ```mermaid
-{{<mermaid>}}
 graph TB
 subgraph "zoneB"
    p3(Pod) --> n3(Node3)
@@ -210,7 +207,6 @@ classDef k8s fill:#326ce5,stroke:#fff,stroke-width:4px,color:#fff;
 classDef cluster fill:#fff,stroke:#bbb,stroke-width:2px,color:#326ce5;
 class n1,n2,n3,n4,p1,p2,p3 k8s;
 class zoneA,zoneB cluster;
-{{< /mermaid >}}
 ```
 
 ---
@@ -229,7 +225,6 @@ Live editor link: [figure](https://mermaid-js.github.io/mermaid-live-editor/edit
 
 Code:
 ```
-{{< mermaid >}}
 %%{init:{"theme":"neutral"}}%%
 sequenceDiagram
     actor me
@@ -251,7 +246,6 @@ sequenceDiagram
     kubelet->>container: 10. start container
     kubelet->>apiSrv: 11. update pod status
     apiSrv-->>etcd: 12. save new state
-{{< /mermaid >}}
 ```
 
 ---
@@ -295,7 +289,7 @@ Note: Add the live editor URL link as a comment in your code so contributors/rev
 
 ### Using hybrid Mermaid+SVG
 
-K8s docs supports SVG images. This method allows you to create/edit Mermaid figures in the live editor. Then from the live editor, you generate and download an SVG image file. Finally, add the SVG image to the docs as you would with any other SVG image.
+K8s docs support SVG images. This method allows you to create/edit Mermaid figures in the live editor. Then from the live editor, you generate and download an SVG image file. Finally, add the SVG image to the docs as you would with any other SVG image.
 
 * Use live editor to create and edit figures.
 
